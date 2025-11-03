@@ -1,31 +1,38 @@
+
 # Scraper de Livres - Books to Scrape
 
-Un programme Python pour extraire des informations de livres depuis le site Books to Scrape.
+## Objectif du Projet
 
-## Description du Projet
+Ce projet a pour objectif de développer un scraper web en Python capable d'extraire des données de livres depuis le site Books to Scrape. Le contexte est celui d'un projet éducatif pour apprendre les techniques de web scraping, l'organisation de code Python et la création d'interfaces en ligne de commande.
 
-Ce projet permet de recuperer automatiquement des informations sur des livres depuis le site web Books to Scrape. C'est un projet educatif pour apprendre le scraping web avec Python.
+## Installation des Dépendances
 
-## Fonctionnalités
+Commande
+pip install -r requirements.txt
 
-- Extraction des informations des livres (titre, prix, description, etc.)
-- Support de plusieurs categories de livres
-- Telechargement des images des livres
-- Interface en ligne de commande facile a utiliser
-- Sauvegarde des donnees en fichiers CSV
+Comment Exécuter le Scraper
+Commande de base :
+python run_scraper.py
 
-## Installation
+Pour voir les catégories disponibles :
+python run_scraper.py --list-categories
 
-### Ce dont vous avez besoin
+Pour scraper une catégorie spécifique :
+python run_scraper.py --category travel
 
-- Python 3.8 ou plus recent
-- Le gestionnaire de packages pip (inclus avec Python)
+Pour scraper toutes les catégories :
+python run_scraper.py --all
 
-### Installation pas a pas
+Exemples de Commandes
+Scraper seulement la catégorie Travel :
+python run_scraper.py --category travel
 
-1. **Telechargez le projet**
-   - Si vous avez les fichiers du projet, placez-les dans un dossier
+Scraper plusieurs catégories avec un délai :
+python run_scraper.py --categories travel mystery --delay 2
 
-2. **Installez les dependances necessaires**
-   ```bash
-   pip install -r requirements.txt
+Scraper avec limitation de pages pour tester rapidement :
+python run_scraper.py --categories poetry --max-pages 1
+
+Scraper toutes les catégories avec un dossier de sortie personnalisé :
+python run_scraper.py --all --outdir mes_donnees
+
